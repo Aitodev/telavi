@@ -1115,18 +1115,16 @@ textarea:focus {
 .gallery-main div h3{
   position: absolute;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   top: 0;
   color: #fff;
-  padding-top: 140%;
-  padding-left: 30%;
+  margin-top: 140%;
+  margin-left: 30%;
 }
 
 @media screen and (max-width: 550px){
   .gallery-main div{margin:0}
-  .gallery-main{
-    padding: 0;
-  }
+  .gallery-main{padding: 0;}
 }
 
 .gallery-main:hover img{

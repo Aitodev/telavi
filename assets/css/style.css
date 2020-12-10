@@ -1115,10 +1115,11 @@ textarea:focus {
 .gallery-main div h3{
   position: absolute;
   font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
   font-weight: 300;
   top: 0;
   color: #fff;
-  margin-top: 140%;
+  margin-top: 130%;
   margin-left: 30%;
 }
 
@@ -1130,6 +1131,7 @@ textarea:focus {
 .gallery-main:hover img{
   opacity: 0.3;
   transition: .8s opacity;
+
 }
 
 .gallery-main:hover img:hover{

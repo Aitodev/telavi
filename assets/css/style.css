@@ -1102,6 +1102,7 @@ textarea:focus {
 }
 
 .gallery-main div{
+  position: relative;
   flex:auto;
   width: 237px;
   margin: .5vw;
@@ -1109,6 +1110,16 @@ textarea:focus {
 
 .gallery-main img{
   height: auto;
+}
+
+.gallery-main div h3{
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  top: 0;
+  color: #fff;
+  padding-top: 140%;
+  padding-left: 30%;
 }
 
 @media screen and (max-width: 550px){

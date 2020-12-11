@@ -1112,10 +1112,10 @@ textarea:focus {
 .gallery-main div:before{
   content: '';
   position: absolute;
-  top: 5%;
-  right: 5%;
-  bottom: 5%;
-  left: 5%;
+  top: 3%;
+  right: 3%;
+  bottom: 3%;
+  left: 3%;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
   transition: 0.2s;
@@ -1126,10 +1126,10 @@ textarea:focus {
 .gallery-main div:after{
   content: '';
   position: absolute;
-  top: 5%;
-  right: 5%;
-  bottom: 5%;
-  left: 5%;
+  top: 3%;
+  right: 3%;
+  bottom: 3%;
+  left: 3%;
   border-left: 2px solid #fff;
   border-right: 2px solid #fff;
   transition: 0.2s;

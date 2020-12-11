@@ -1108,6 +1108,49 @@ textarea:focus {
   margin: .5vw;
 }
 
+.gallery-main div:before{
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: 0.2s;
+  transform: scaleX(0);
+}
+
+
+.gallery-main div:after{
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transition: 0.2s;
+  transform: scaleY(0);
+}
+
+.gallery-main div:hover:before, 
+.gallery-main div:hover:after{
+  transform: scale(1);
+}
+
+/* .gallery-main:hover img{
+  opacity: 0.3;
+  transition: .8s opacity;
+}
+
+.gallery-main:hover img:hover{
+  opacity: 0 ;
+  transition: .8s opacity;
+} */
+
+
 .gallery-main img{
   height: auto;
 }
@@ -1119,7 +1162,17 @@ textarea:focus {
   font-weight: 300;
   top: 0;
   color: #fff;
-  margin-top: 130%;
+  margin-top: 125%;
+  margin-left: 30%;
+}
+
+.gallery-main div a{
+  position: absulute;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  top: 0;
+  color: #fff;
+  margin-top: 120%;
   margin-left: 30%;
 }
 
@@ -1128,16 +1181,21 @@ textarea:focus {
   .gallery-main{padding: 0;}
 }
 
-.gallery-main:hover img{
+/* .gallery-main:hover img{
   opacity: 0.3;
   transition: .8s opacity;
-
 }
 
 .gallery-main:hover img:hover{
   opacity: 1;
   transition: .8s opacity;
-}
+} */
+/* 
+.gallery-main div h3{
+  transition: 0.3s;
+  transform: translateY(20px);
+} */
+
 
 .header__inner{
   display: flex;

@@ -8,9 +8,12 @@
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
+    <!-- Swiper.js for testiminoals -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
     <!-- CSS
 	============================================ -->
     <!-- google fonts -->
@@ -36,7 +39,7 @@
     <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
     <!-- main style css -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    
 </head>
 
 <body>
@@ -2581,7 +2584,7 @@
             </p>
         </div>        
     </div> -->
-    <div class="story-container">
+    <!-- <div class="story-container">
         <ul>
             <li class="has-story">
                 <div class="story">
@@ -2608,7 +2611,44 @@
                 <span class="user">@sasha_koles</span>
             </li>
         </ul>
-    </div>
+    </div> -->
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="imgBx">
+                      <img src="assets/img/testimonial-stories/IMG_9351.JPG" alt="">
+                  </div>
+                  <div class="details">
+                      <h3>@sasha_koles</h3>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="assets/img/testimonial-stories/IMG_0216.JPG" alt="">
+                </div>
+                <div class="details">
+                    <h3>@marina_slan</h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="assets/img/testimonial-stories/IMG_0277.JPG" alt="">
+                </div>
+                <div class="details">
+                    <h3>@urmood.place</h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="assets/img/testimonial-stories/IMG_0439.JPEG" alt="">
+                </div>
+                <div class="details">
+                    <h3>@juliaartemkina</h3>
+                </div>
+            </div>
+            </div>
+        </div>
     
     <!-- footer area start -->
     <footer class="footer-widget-area">
@@ -2892,7 +2932,9 @@
 
     <!-- JS
 ============================================ -->
-
+    <!-- Swiper.js for testiminoals -->
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <!-- jQuery JS -->
@@ -2925,6 +2967,25 @@
     <script src="assets/js/plugins/google-map.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        });
+    </script>
 </body>
 
 </html>

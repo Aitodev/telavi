@@ -1201,7 +1201,7 @@ textarea:focus {
 }
 
 .thumbnails li a img{
-  width: 30vmin;
+  width: 25vmin;
   height: 20vmin;
   object-fit: cover;
   object-position: top;
@@ -1209,8 +1209,8 @@ textarea:focus {
 
 .slides{
   overflow: hidden;
-  width: 75vmin;
-  height: 100vmin;
+  width: 60vmin;
+  height: 80vmin;
 }
 
 .slides li img{

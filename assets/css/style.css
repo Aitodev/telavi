@@ -1141,6 +1141,49 @@ textarea:focus {
   transform: scale(1);
 }
 
+.gallery-testiminoals{
+  padding: 3vw;
+  font-size: 0px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-flow: row wrap;
+  display: flex;
+}
+
+.gallery-testiminoals .gallery-item{
+  position: relative;
+  flex:auto;
+  width: 237px;
+  margin: .5vw;
+}
+
+.gallery-testiminoals .gallery-item h3{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.gallery-testiminoals .gallery-item h4{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 35px;
+
+}
+
+.gallery-testiminoals .gallery-item img{
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 550px){
+  .gallery-testiminoals .gallery-item{margin:0}
+  .gallery-testiminoals{padding: 0;}
+}
+
+
 /* .testiminoals{
   width: 1200px;
 } */
@@ -6912,7 +6955,7 @@ blockquote {
 }
 
 .info-list {
-  display: grid;
+  display: inline;
   grid-template-columns: auto auto;
 }
 

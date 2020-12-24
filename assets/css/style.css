@@ -26,6 +26,11 @@ Table of content
 23. footer
 -------------------------------------------------------------------*/
 /*------ Typography Style Start ------*/
+@font-face{
+  font-family: 'Proxima Nova Light';
+  src: url(../fonts/ProximaNova-Light.ttf);
+}
+
 body {
   color: #555555;
   line-height: 1.7;
@@ -1020,13 +1025,13 @@ textarea:focus {
 
 /*------- short classes start -------*/
 .section-padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 110px;
 }
 
 @media only screen and (max-width: 767.98px) {
   .section-padding {
-    padding-top: 63px;
+    padding-top: 100px;
     padding-bottom: 63px;
   }
 }
@@ -1136,6 +1141,19 @@ textarea:focus {
   transform: scaleY(0);
 }
 
+.gallery__title{
+  position: relative
+}
+
+.gallery__title h2{
+  font-family: 'Proxima Nova Light';
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
 .gallery-main div:hover:before, 
 .gallery-main div:hover:after{
   transform: scale(1);
@@ -1147,30 +1165,54 @@ textarea:focus {
   flex-wrap: wrap;
   flex-direction: column;
   flex-flow: row wrap;
+  /* display: flex; */
+}
+.gallery__content{
+  padding: 3vw;
+  font-size: 0px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-flow: row wrap;
   display: flex;
 }
 
-.gallery-testiminoals .gallery-item{
+.gallery__content .gallery-item{
   position: relative;
   flex:auto;
   width: 237px;
   margin: .5vw;
 }
 
-.gallery-testiminoals .gallery-item h4{
+.gallery__content .gallery-item h4{
+  font-size: 15px;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+  margin-top: 10px;
 }
 
-.gallery-testiminoals .gallery-item h5{
+/* .gallery-testiminoals .gallery-item h5{
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 35px;
   margin-top: 10px;
+  background-color: #96999C;
+  border-radius: 10px;
+} */
+
+.gallery__text {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Proxima Nova Light";
+  margin-top: 10px;
+  background: #fefae9;
+  padding: 15px 15px;
+  border-radius: 30px;
 }
 
 .gallery-item{
@@ -1224,11 +1266,11 @@ textarea:focus {
   opacity: 0;
 }
 
-.gallery-testiminoals .gallery-item .gallery_main_icons .gallery__icons img{
+.gallery__content .gallery-item .gallery_main_icons .gallery__icons img{
   width: 100px;
   position: absolute; 
-  margin-top: 30%;
-  margin-left: 30%;
+  margin-top: 35%;
+  margin-left: 35%;
 }
 
 .gallery_main_icons a{
@@ -1242,7 +1284,7 @@ textarea:focus {
 }
 
 
-.gallery-testiminoals .gallery-item img{
+.gallery__content .gallery-item img{
   width: 100%;
   height: auto;
   backface-visibility: hidden
@@ -1252,6 +1294,7 @@ textarea:focus {
 .gallery-item.hover > img{
   opacity: 0.1;
 }
+
 .gallery-item:hover:after,
 .gallery-item.hover:after {
   width: 100%;
@@ -1264,8 +1307,8 @@ textarea:focus {
 
 
 @media screen and (max-width: 550px){
-  .gallery-testiminoals .gallery-item{margin:0}
-  .gallery-testiminoals{padding: 0;}
+  .gallery__content .gallery-item{margin:0}
+  .gallery__content{padding: 0;}
 }
 
 .container-testiminoal{
@@ -1377,6 +1420,7 @@ textarea:focus {
 
 .logo__footer{
   width: 120px;
+  margin-top: -40px;
 }
 
 /* .gallery-main:hover img{
@@ -1405,7 +1449,7 @@ textarea:focus {
   margin-left: 30%;
 }
 
-.gallery-main div a{
+/* .gallery-main div a{
   position: absulute;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
@@ -1413,7 +1457,7 @@ textarea:focus {
   color: #fff;
   margin-top: 120%;
   margin-left: 30%;
-}
+} */
 
 @media screen and (max-width: 550px){
   .gallery-main div{margin:0}
@@ -1684,8 +1728,37 @@ textarea:focus {
 /*----------- header minicart area end -----------*/
 /*------- header search area start -------*/
 .header-search-container {
-  margin-left: 30%;
   position: relative;
+}
+
+.search-box{
+  position: absolute;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-btn{
+  color: #c29958;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
 }
 
 .header-search-box {
@@ -2137,6 +2210,7 @@ textarea:focus {
 
 .btn-sqr {
   color: #fff;
+  font-family: 'Proxima Nova Light';
   font-size: 15px;
   border-radius: 0;
   background-color: #c29958;
@@ -2162,7 +2236,7 @@ textarea:focus {
 }
 
 .mobile-logo {
-  max-width: 140px;
+  max-width: 100px;
   width: 100%;
 }
 
@@ -2873,8 +2947,26 @@ textarea:focus {
   .header__computer{
     display: none;
   }
+  .gallery__title{
+    margin-bottom: 35px;
+  }
 }
 
+
+@media only screen and (min-width: 1200px) and (max-width: 2200.98px), only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .nav__header{
+    font-size: 28px;
+  }
+  .nav{
+    width: 250px;
+  }
+  .header-configure-area ul li a{
+    font-size: 35px;
+  }
+  .header-search-btn{
+    font-size: 35px;
+  }
+}
 
 .hero-style-five .hero-slider-item {
   height: 800px;
@@ -3444,7 +3536,7 @@ textarea:focus {
 }
 
 .section-title .title {
-  text-transform: capitalize;
+  text-transform: none;
   background: -webkit-gradient(linear, left top, right top, from(#dcdcdc), color-stop(#000), to(#dcdcdc));
   background: -webkit-linear-gradient(left, #dcdcdc, #000, #dcdcdc);
   background: -o-linear-gradient(left, #dcdcdc, #000, #dcdcdc);
@@ -4140,8 +4232,9 @@ textarea:focus {
 }
 
 .price-regular {
-  color: #c29958;
+  color: #000;
   font-weight: 500;
+  font-size: 20px;
 }
 
 .price-old {
@@ -5248,11 +5341,16 @@ blockquote {
 }
 
 .about-title {
-  font-size: 48px;
+  font-size: 38px;
   color: #d1d1d1;
   display: block;
   line-height: 1.1;
   margin-bottom: 38px;
+  padding-left: 25px;
+}
+
+.about-title-black{
+  color: #000;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -5264,9 +5362,19 @@ blockquote {
 }
 
 .about-sub-title {
-  line-height: 1.5;
+  line-height: 1.9;
   padding-bottom: 20px;
+  font-size: 21px;
+  font-weight: 400;
+  font-family: 'Proxima Nova Light';
+  padding-left: 25px;
 }
+.under-about-text{
+  padding-right: 70px;
+}
+/* .about-sub-title {
+  font-family: 'Proxima Nova Light';
+} */
 
 @media only screen and (max-width: 767.98px) {
   .about-sub-title {
@@ -7102,8 +7210,13 @@ blockquote {
 }
 
 .contact-title {
+  font-family: 'Proxima Nova Light';
   line-height: 1;
   padding-bottom: 22px;
+}
+
+.contact-title p{
+  font-family: 'Proxima Nova Light';
 }
 
 @media only screen and (max-width: 575.98px) {
